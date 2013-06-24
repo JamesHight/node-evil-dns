@@ -15,7 +15,7 @@ Usage
 -----
 
 ````javascript
-var evilDns = require('./evil-dns');
+var evilDns = require('evil-dns');
 
 // String match
 evilDns.add('foo.com', '1.2.3.4');
