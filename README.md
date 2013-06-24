@@ -2,6 +2,7 @@ Evil DNS
 ========
 
 Override the IP address returned for one or more domains.
+
 Note: This module modifies the core DNS libraries lookup function.
 
 Installation
