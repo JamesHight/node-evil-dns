@@ -1,0 +1,26 @@
+{
+  "name": "evil-dns",
+  "version": "0.0.1",
+  "description": "Override the IP address returned for one or more domains.",
+  "main": "evil-dns.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamesHight/node-evil-dns.git"
+  },
+  "keywords": [
+    "dns",
+    "override",
+    "domain",
+    "change",
+    "ip",
+    "address"
+  ],
+  "author": "James Hight",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/JamesHight/node-evil-dns/issues"
+  }
+}
