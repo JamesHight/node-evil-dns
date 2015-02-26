@@ -1,6 +1,6 @@
 var dns = require('dns'),
 	net = require('net'),
-	dnsLookup = dns.lookup;
+	dnsLookup = dns.lookup,
 	domains = [];
 
 /**
@@ -96,6 +96,13 @@ function remove(domain, ip) {
 	}
 }
 
+/**
+ * Remove all domains from the override list
+ **/
+function clear() {
+	domains = [];
+}
+
 function createRegex(val) {
 	var parts = val.split('*'),
 		i;
@@ -108,15 +115,16 @@ function createRegex(val) {
 	val = '^' + val + '$';
 
 	return new RegExp(val, 'i');
-};
+}
 
 
 function regexEscape(val) {
 	return val.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-};
+}
 
 module.exports = {
 	add: add,
 	remove: remove,
+	clear: clear,
 	domains: domains
 };

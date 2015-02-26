@@ -11,3 +11,5 @@ pids
 results
 
 /node_modules
+
+.idea

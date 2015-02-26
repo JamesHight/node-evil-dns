@@ -31,4 +31,7 @@ evilDns.remove('*foo.*','1.2.3.4');
 // Remove domain by matching the RegExp source attributes
 // When no ip is passed any entry matching the domain will be removed
 evilDns.remove(/^foo\.bar\..*$/i);
+
+// Remove all domain entries
+evilDns.clear();
 ````

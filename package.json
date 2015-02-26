@@ -4,7 +4,7 @@
   "description": "Override the IP address returned for one or more domains.",
   "main": "evil-dns.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R spec ./tests"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,9 @@
   "dependencies": {},
   "bugs": {
     "url": "https://github.com/JamesHight/node-evil-dns/issues"
+  },
+  "devDependencies": {
+    "chai": "^2.1.0",
+    "mocha": "^2.1.1"
   }
 }
