@@ -7,17 +7,16 @@ var dns = require('dns'),
  * Override core DNS lookup function
  **/
 
-dns.lookup = function(domain, family, callback) {
+dns.lookup = function(domain, options, callback) {
 	var i;
 
 	if (arguments.length === 2) {
-		callback = family;
-		family = 0;
+		callback = options;
+		options = {};
 	} 
-	else if (!family) {
-		family = 0;
-	} 
-	else {
+
+    var family = (typeof(options) === 'object') ? options.family : options;
+    if (family) {
 		family = +family;
 		if (family !== 4 && family !== 6) {
 			throw new Error('invalid argument: `family` must be 4 or 6');
@@ -32,7 +31,7 @@ dns.lookup = function(domain, family, callback) {
 		}
 	}
 
-	return dnsLookup.call(this, domain, family, callback);
+	return dnsLookup.call(this, domain, options, callback);
 };
 
 /**
