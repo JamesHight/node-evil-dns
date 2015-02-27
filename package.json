@@ -1,10 +1,13 @@
 {
   "name": "evil-dns",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Override the IP address returned for one or more domains.",
   "main": "evil-dns.js",
   "scripts": {
     "test": "mocha -R spec ./tests"
+  },
+  "engines": {
+    "node" : ">=0.12"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,14 @@
     "address"
   ],
   "author": "James Hight",
+  "contributors": [
+    {
+      "name": "Martin Heidegger"
+    },
+    {
+      "name": "Jacob Page"
+    }
+  ],
   "licenses": [
     {
       "type": "Apache 2.0",
@@ -31,6 +42,6 @@
   },
   "devDependencies": {
     "chai": "^2.1.0",
-    "mocha": "^2.1.1"
+    "mocha": "^2.1.0"
   }
 }
