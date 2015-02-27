@@ -1,6 +1,6 @@
 var dns = require('dns'),
 	net = require('net'),
-	dnsLookup = dns.lookup;
+	dnsLookup = dns.lookup,
 	domains = [];
 
 /**
