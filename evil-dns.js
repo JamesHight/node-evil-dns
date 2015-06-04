@@ -24,9 +24,10 @@ dns.lookup = function(domain, options, callback) {
 	}
 
 	for (i = 0; i < domains.length; i++) {
-		if (domain.match(domains[i].domain)) {
-			if (!family || family === domain[i].family) {
-				return callback(null, domains[i].ip, family);
+		var entry = domains[i];
+		if (domain.match(entry.domain)) {
+			if (!family || family === entry.family) {
+				return callback(null, entry.ip, entry.family);
 			}			
 		}
 	}
